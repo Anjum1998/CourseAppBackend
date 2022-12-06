@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CourseController {
-    @GetMapping("/")
-    public String Home()
+    @GetMapping("/view")
+    public String ViewCourse()
     {
-        return "Welcome";
+        return "Welcome to view all courses ";
     }
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
     public String AddCourse(@RequestBody Course c)
